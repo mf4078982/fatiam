@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block text %}
+<!-- Section: Design Block -->
+<form action="" method="POST">
+  {% csrf_token %}
+<section class="alert alert-dark">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+      <div class="container alert alert-danger">
+        <div class="row gx-lg-5 align-items-center alert alert-primary">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="my-5 display-3 fw-bold ls-tight">
+              The best offer <br />
+              <span class="text-primary">for your Login</span>
+            </h1>
+            <p style="color: hsl(0, 10%, 51%)">
+              I'm glad you found the information helpful! If you have any more questions or if there's anything else I can assist you with, feel free to ask. Good luck with your project!
+            </p>
+          </div>
+  
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <h1 class="alert alert-danger text-center">Login Page</h1>
+                  
+                      <div class="form-outline">
+                        <input type="text" name="uname" id="form3Example1" class="form-control" />
+                        <label class="form-label" for="form3Example1">First name</label>
+                      </div>
+                    
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input type="email" name="email" id="form3Example3" class="form-control" />
+                    <label class="form-label" for="form3Example3">Email address</label>
+                  </div>
+  
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input type="password" name="pass1" id="form3Example4" class="form-control" />
+                    <label class="form-label" for="form3Example4">Password</label>
+                  </div>
+  
+                  <!-- Checkbox -->
+
+        
+  
+                  <!-- Submit button -->
+                  <input type="submit" value="Login" class="btn btn-danger btn-block mb-4">
+                  <a href="{% url 'register'%}"class="btn btn-danger btn-block mb-4">Register Page</a>
+                  <a href="{% url 'logout' %}"class="btn btn-danger btn-block mb-4">logout</a>
+                  
+                  
+                  <label for="male" class="btn btn-dark btn-block mb-4">Male
+                    <input type="radio" name="gender" id="male" value="male">
+                  </label>
+                  
+                  
+                  <label for="female" class="btn btn-dark btn-block mb-4">Female
+                  <input type="radio" name="gender" id="female" value="female">
+                  </label>
+  
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+</form>
+  <!-- Section: Design Block -->
+    
+{% endblock text %}
+    
